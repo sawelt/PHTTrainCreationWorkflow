@@ -1,0 +1,38 @@
+The shape of the dataset is:  (53766, 7)
+The shape of the dataset after null values removal: (53471, 7)
+Starting data pre-processing ...
+Data pre-processing is complete!!!
+Training data set size:  (37429, 14)
+Testing data set size:  (16042, 14)
+Model I XGBClassifier Accuracy:  0.7286497942899888 
+
+The confusion Matrix is: 
+
+[[2542 2957]
+ [1396 9147]] 
+
+              precision    recall  f1-score   support
+
+           0       0.65      0.46      0.54      5499
+           1       0.76      0.87      0.81     10543
+
+    accuracy                           0.73     16042
+   macro avg       0.70      0.66      0.67     16042
+weighted avg       0.72      0.73      0.72     16042
+
+Model II LightGBM Accuracy:  0.7310809126044134 
+
+Confusion matrix is: 
+
+[[2599 2900]
+ [1414 9129]] 
+
+              precision    recall  f1-score   support
+
+           0       0.65      0.47      0.55      5499
+           1       0.76      0.87      0.81     10543
+
+    accuracy                           0.73     16042
+   macro avg       0.70      0.67      0.68     16042
+weighted avg       0.72      0.73      0.72     16042
+

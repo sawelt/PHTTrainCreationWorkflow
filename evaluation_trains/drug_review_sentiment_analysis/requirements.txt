@@ -1,0 +1,10 @@
+lightgbm
+minio
+nltk
+numpy
+pandas
+regex
+scikit-learn
+scipy
+textblob
+xgboost
