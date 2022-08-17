@@ -6,7 +6,7 @@ To achieve FAIRification of various digital components in a Distributed Analytic
 The proposed workflows are evaluated in a three-folded approach. Firstly, a technical evaluation using three data use cases, and later, a user evaluation using a survey-based method. The final assessment is done concerning the FAIR guidelines.
 
 ### Usecase-based Evaluation
-The purpose of this evaluation is to test the functionalities of the implemented workflows. Three different types of use cases, based on the data set and programming languages used, were chosen to evaluate the flexibility of the workflows.
+The purpose of this evaluation is to test the functionalities of the implemented workflows. Three different types of use cases, based on the data set and programming languages used, were chosen to evaluate the flexibility of the workflows. The implementation and Train details for each use case is given in _evaluation_trains_ directory and the corresponding data used for evaluation is available in _evaluation_trains_data_ directory.
 
 #### Drug Reviews Sentiment Analysis
 We performed sentiment analysis on the drug reviews data set from the [UCI ML repository](https://archive.ics.uci.edu/ml/datasets/Drug+Review+Dataset+\%28Drugs.com\%29). This analysis aimed to determine whether a given drug review contains positive or negative user emotions. The data set has more than 200k patient reviews on specific drugs in textual format, their medical conditions, a 10-star rating to reflect their satisfaction with the drug, and a usefulness count by other patients who found the drug review helpful.
@@ -22,4 +22,12 @@ The classification algorithm was written in Python and used Keras to train and b
 We carried out a 3-way classification to build a model to predict fetal health using the Cardiotocography (CTG) data set from the [UCI ML repository](https://archive.ics.uci.edu/ml/datasets/cardiotocography). The CSV data set consists of uterine contraction (UC) measurements and fetal health rate (FHR) features on a cardiotocograph. The measurements are classified into three target labels by expert obstetricians: Normal, Suspect, and Pathological. It has 2126 measurements and 23 attributes. 
 
 The classification algorithm was written in R and used the [Random Forest Classifier package](https://cran.r-project.org/web/packages/randomForest/randomForest.pdf) to train and build the classification model. The Train image was created and deployed to the PHT ecosystem using the _Train Creation Workflow_ and the _Train Storehouse Platform_. The Train consists of the data classification task in R, _installPackages.R_ for dependencies, a standard template based _Dockerfile_, and three JSON files: connection interfaces, metadata, and user feedback.
+
+### Survey-based Evaluation
+The proposed workflows are for a targeted community working in the DA domain, therefore, a survey-based evaluation to receive feedback from PHT users, researchers, and domain experts was performed. A survey was distributed to nine participants and they were asked to create their own Train images to gather information concerning four different categories for our approach. The detailed survey questions and the results are available in _user_survey_results_ directory. The four categories are mentioned below.
+
+* **Efficiency**: It involves evaluation of workflows performance and efficiency in executing specific tasks with no or minimal operational issues. 
+* **Usability**: This quality evaluates the degree to which the workflows can be used by the users to achieve the end objectives, for example, uploading the required files, or defining the connection interfaces.
+* **Usefulness**: We evaluate the motivation behind the proposed workflows using the usefulness aspect of a software system.
+* **Comprehensiveness**: It evaluates the state of the proposed solution to verify if it contains all or nearly all aspects of what was expected from it, for example, self-explainability, or completeness of the solution.
 
